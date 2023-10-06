@@ -4,7 +4,7 @@ const PORT = '3000';
 
 // Home page
 app.get('/', (req, res) => {
-    res.status(200).send('<h1>We are up and running mate!!</h1>');
+    res.status(200).json('We are up and running mate!!');
 })
 
 
@@ -48,3 +48,5 @@ app.get('/api/v1/:token', (req, res) => {
 app.listen(PORT, () => {
     console.log('Server is up at ', PORT);
 });
+
+module.exports =  app;
